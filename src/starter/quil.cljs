@@ -50,7 +50,7 @@
     (q/background 0)
     ; fxhash functions
     (q/text (str "fxhash=" (f/fx-hash)) (x 2) (y 2))
-    (q/text (str "fxrand=" (f/fx-rand)) (x 2) (y 3))
+    (q/text (str "fxrand=" (f/fx-rand)) (x 2) (y 4))
     ; draw resolution independent circle
     (let [[w h] dims]
       (q/fill (* 255 (q/sin t')) (* 255 green) (* 255 (q/cos t')))
