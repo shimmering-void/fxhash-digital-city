@@ -4,6 +4,8 @@ A light `shadow-cljs` template to create generative art with [quil](http://quil.
 
 You'll need `Java`, `node` and `npm` installed (`yarn` also works). 
 
+<img width="1175" alt="Screen Shot 2021-11-16 at 1 56 30 pm" src="https://user-images.githubusercontent.com/5009316/141897043-5bad64cb-a11a-42ae-b519-132a74e3a4ba.png">
+
 # Setup + Development
 
 `npm i` or `yarn` to install dependencies
