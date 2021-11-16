@@ -11,9 +11,7 @@
   (if force-square
     (let [dim (min (* scale (.-innerWidth js/window)) (* scale (.-innerHeight js/window)))]
       [dim dim])
-    (let [dims [(* scale (.-innerWidth js/window)) (* scale (.-innerHeight js/window))]]
-      (js/console.log dims)
-      dims)))
+    [(* scale (.-innerWidth js/window)) (* scale (.-innerHeight js/window))]))
 
 (def dims (get-viewport 1 true))
 
@@ -28,14 +26,12 @@
   (let [[_ h] dims] (* t (/ h 100))))
 
 (defn setup []
-  ;; EXAMPLE CODE, DO NOT HARDCORE YOUR FEATURES
+  ;; EXAMPLE CODE, DO NOT HARDCODE YOUR FEATURES
   (f/register-features {:dark true :another-feature "yes"})
 
   (q/frame-rate 30)
-  ;; (q/no-smooth)
-  ;; (q/color-mode :hsb)
-  ; setup function returns initial state. It contains
-  ; circle color and position.
+
+  ; setup function returns initial state
   {:t 0
    :green (f/fx-rand)})
 
