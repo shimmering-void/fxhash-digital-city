@@ -20,6 +20,14 @@ The fxhash host exposes two useful variables, `fxhash` and `fxrand`, which are c
 
 See the [fxhash guide](https://www.fxhash.xyz/articles/guide-mint-generative-token).
 
+We also expose a method to register features of your token via `(register-features {:feat-a true})` in the same namespace.
+
+## index.html + main.css
+
+Both these files (located in the `public/` folder) can be edited freely so long as you preserve the `fxhash` snippet and the filepaths.
+
+If you rename the root namespace from `starter` make sure to update the call to `starter.quil.init()` in `index.html`.
+
 # Packaging + Release
 
 `npm run release` will build & package into `fxhash-release.zip`, ready to upload to the site.
