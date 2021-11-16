@@ -12,11 +12,11 @@ You'll need `Java`, `node` and `npm` installed (`yarn` also works).
 
 `npm run dev` launches a live-reloading dev environment at `http://localhost:8020/`
 
-## Calva
+### Calva
 
 This project works with `calva`, make sure to select `shadow-cljs` then check the box next to `:app` and connect to `:app` for your REPL.
 
-## fxhash
+### fxhash
 
 The fxhash host exposes two useful variables, `fxhash` and `fxrand`, which are clojureified in the `starter.fx-hash` namespace as `(fx-hash)` and `(fx-rand)`.
 
@@ -24,16 +24,16 @@ See the [fxhash guide](https://www.fxhash.xyz/articles/guide-mint-generative-tok
 
 We also expose a method to register features of your token via `(register-features {:feat-a true})` in the same namespace.
 
-## index.html + main.css
+### index.html + main.css
 
 Both these files (located in the `public/` folder) can be edited freely so long as you preserve the `fxhash` snippet and the filepaths.
 
 If you rename the root namespace from `starter` make sure to update the call to `starter.quil.init()` in `index.html`.
 
-# Packaging + Release
+## Packaging + Release
 
 `npm run release` will build & package into `fxhash-release.zip`, ready to upload to the site.
 
-# Tips
+## Tips
 
 It's a regular quil sketch, so refer to the [quil API docs](http://quil.info/api) and the [fxhash guide](https://www.fxhash.xyz/articles/guide-mint-generative-token) for further guidance.
