@@ -1,8 +1,16 @@
 {
+  "scripts": {
+    "clean": "rimraf ./public/js",
+    "zip": "cd public && npx bestzip ../fxhash-release.zip * && cd ..",
+    "dev": "npx shadow-cljs watch app",
+    "release": "npm run clean && npx shadow-cljs release app && npm run zip"
+  },
   "devDependencies": {
-    "shadow-cljs": "^2.11.5"
+    "bestzip": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "shadow-cljs": "^2.16.4"
   },
   "dependencies": {
-    "p5": "^1.1.9"
+    "p5": "^1.4.0"
   }
 }

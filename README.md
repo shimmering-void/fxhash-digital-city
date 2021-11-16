@@ -1,44 +1,29 @@
-# shadow-cljs + quil quickstart
+# fxhash + shadow-cljs + quil quickstart
 
-This is a minimum template you can use as the basis for quil projects.
+A light `shadow-cljs` template to create generative art with [quil](http://quil.info/) for the [fxhash](https://www.fxhash.xyz/) platform. 
 
-![image](https://user-images.githubusercontent.com/5009316/125375320-3495d400-e3cc-11eb-8162-ba812c1a70d7.png)
+You'll need `Java`, `node` and `npm` installed (`yarn` also works). 
 
-## Required Software
+# Setup + Development
 
-- [node.js (v6.0.0+)](https://nodejs.org/en/download/)
-- [Java JDK (8+)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or [Open JDK (8+)](http://jdk.java.net/10/)
+`npm i` or `yarn` to install dependencies
 
-## Running the Example
+`npm run dev` launches a live-reloading dev environment at `http://localhost:8020/`
 
-```bash
-git clone https://github.com/Saikyun/shadow-cljs-quil-starter.git quickstart
-cd quickstart
-npm install
-npx shadow-cljs server
-```
+## Calva
 
-This runs the `shadow-cljs` server process which all following commands will talk to. Just leave it running and open a new terminal to continue.
+This project works with `calva`, make sure to select `shadow-cljs` then check the box next to `:app` and connect to `:app` for your REPL.
 
-The first startup takes a bit of time since it has to download all the dependencies and do some prep work. Once this is running we can get started.
+## fxhash
 
-```txt
-npx shadow-cljs watch app
-```
+The fxhash host exposes two useful variables, `fxhash` and `fxrand`, which are clojureified in the `starter.fx-hash` namespace as `(fx-hash)` and `(fx-rand)`.
 
-This will begin the compilation of the configured `:app` build and re-compile whenever you change a file.
+See the [fxhash guide](https://www.fxhash.xyz/articles/guide-mint-generative-token).
 
-When you see a "Build completed." message your build is ready to be used.
+# Packaging + Release
 
-```txt
-[:app] Build completed. (23 files, 4 compiled, 0 warnings, 7.41s)
-```
+`npm run release` will build & package into `fxhash-release.zip`, ready to upload to the site.
 
-You can now then open [http://localhost:8020](http://localhost:8020).
+# Tips
 
-You should see a spiral, rendered using quil. If you modify `src/starter/quil.cljs` your changes should be reflected in the browser.
-
-## Useful links
-
-- [shadow-cljs docs](https://shadow-cljs.github.io/docs/UsersGuide.html)
-- [quil examples & docs](http://quil.info/)
+It's a regular quil sketch, so refer to the [quil API docs](http://quil.info/api) and the [fxhash guide](https://www.fxhash.xyz/articles/guide-mint-generative-token) for further guidance.
