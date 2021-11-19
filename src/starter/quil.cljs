@@ -61,7 +61,7 @@
     :setup setup
     :update update-state
     :draw draw-state
-    :key-pressed (u/save-image "export.png")
+    ;; :key-pressed (u/save-image "export.png")
     :middleware [m/fun-mode]))
 
 ;; start is called by init and after code reloading finishes
